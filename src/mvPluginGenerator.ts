@@ -44,7 +44,7 @@ interface PluginInformation {
     title: string;
 }
 
-export async function mvPluginGenerator(PluginInformation: PluginInformation) {
+export async function mvPluginGenerator(title: string, author: string, description: string) {
     vscode.window.showInformationMessage('Generating a RPG Maker MV Plugin File with basic contents');
     //use for initializeing plugin
     const TopSection = '/*: ';
@@ -55,18 +55,19 @@ export async function mvPluginGenerator(PluginInformation: PluginInformation) {
     const authorParam = '* @author ';
     const helpParam = '* @help';
 
-    const pMParameter = 'var parameters = PluginManager.parameters( ';
-    const functionNameTop = '(function(){';
-    const functionNameEnd = '})();';
+    const pMParameter = `var parameters = PluginManager.parameters('`;
+    const pMParameterEnd = `');`;
+    const functionNameTop = `(function(){`;
+    const functionNameEnd = `})();`;
 
     //all information files
     let pluginTitle : string;
     let plugindesc : string;
     let pluginAuthor : string;
     
-    pluginTitle = PluginInformation.title;
-    plugindesc = PluginInformation.pldescription;
-    pluginAuthor = PluginInformation.author;
+    pluginTitle = title;
+    plugindesc = description;
+    pluginAuthor = author;
 
     //filled text
     let completePlugindesc : string;
@@ -77,6 +78,32 @@ export async function mvPluginGenerator(PluginInformation: PluginInformation) {
     completePluginAuthor = authorParam + pluginAuthor;
     completeParameters = pMParameter + '\'' + pluginTitle + '\')';
     //build the plugin
+    //naming the plugin
+    let pluginFileName: string;
+    pluginFileName = pluginTitle + '.js';
+    //build the final design
+    let finalPluginTemplate : string;
+    finalPluginTemplate = `//Generated using MJM's RPG Maker MV Generator Extension - its ok to delete this line
+    
+` + TopSection + `
+` + completePlugindesc + `
+` + completePluginAuthor + `
+` + spaceSection + `
+` + helpParam + `
+` + spaceSection + `
+` + spaceSection + `
+` + endSection + `
+
+` + functionNameTop + `
+` + pMParameter + pluginTitle + pMParameterEnd + `
+
+` + functionNameEnd;
+    //check if it a complete plugin file
+    console.log(finalPluginTemplate);
+
+    //generate the plugin
+    fileGenerator(pluginFileName, finalPluginTemplate);
+    
 }
 
 //seaprate the generator into the function
