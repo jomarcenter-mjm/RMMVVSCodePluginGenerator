@@ -1,14 +1,14 @@
 {
-	"name": "rpgmakermvvisualplugingenerator",
-	"displayName": "RpgMakerMVVisualPluginGenerator",
+	"name": "rmmvvscodeplugingenerator",
+	"displayName": "RMMVVSCodePluginGenerator",
 	"description": "Create Plugin much easier with the visual plugin generator",
 	"version": "0.3.0",
 	"publisher": "MJMCreativeWorksAndIdea",
-    "repository":{
-        "type" : "git",
-        "url" : "https://github.com/jomarcenter-mjm/RMMVVSCodePluginGenerator"
-    },
-    "icon": "icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jomarcenter-mjm/RMMVVSCodePluginGenerator"
+	},
+	"icon": "icon.png",
 	"engines": {
 		"vscode": "^1.39.0"
 	},
