@@ -7,17 +7,33 @@ This is a RPG Maker MV Plugin generator extension for visual studio code
 Allows the generation of blank rpg maker MV plugin with all the basic structure needed.
 
 ## Requirements
+required node.js as some functionality like the file creation functionality uses node.js
 
-required node.js to perform most action in this plugin
+## how to use
+open visual studio code in your root folder press 'ctrl + shift + P' and type in 'rpg maker' to select blank or general file
 
 ## Known Issues
-
 No issue as of this writing
 
-## Release Notes
+## License
+MIT License
 
-### 0.1.0
-Initial plugin created
+Copyright (c) 2019 mjm creative works and ideas
 
-### 0.2.0
-added basic blank plugin generator
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

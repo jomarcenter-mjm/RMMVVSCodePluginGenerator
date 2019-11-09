@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 		const authorOutput = await window.showInputBox({
 			value: '',
-			placeHolder: `your name? Don't worry we won't transfer you to someoone's body`,
+			placeHolder: `your name? Don't worry we won't transfer you to someone's body`,
 			validateInput: text => {
 				return text === '' ? 'Do not leave this blank' : null;
 			}

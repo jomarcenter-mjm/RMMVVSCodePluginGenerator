@@ -2,7 +2,7 @@
 	"name": "rpgmakermvvisualplugingenerator",
 	"displayName": "RpgMakerMVVisualPluginGenerator",
 	"description": "Create Plugin much easier with the visual plugin generator",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"engines": {
 		"vscode": "^1.39.0"
 	},
