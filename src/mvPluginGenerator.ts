@@ -34,27 +34,7 @@ export function blankRMMVPluginFile(nameOfPlugin: string) {
     console.log("Test Plugin" + "fileName: " + pluginFileName);
     console.log("Output File" + rmmvContent);
 
-    let folderWorkspaceLocation = vscode.workspace.workspaceFolders;
-    let pluginFileLocation : string;
-    if (folderWorkspaceLocation) {
-        console.log(folderWorkspaceLocation);
-        console.log(folderWorkspaceLocation[0].uri.path);
-        pluginFileLocation = folderWorkspaceLocation[0].uri.fsPath.toString() + '/js/plugins/';
-    } else 
-    {
-        return vscode.window.showWarningMessage("cannot find folder location");
-    }
-
-    console.log(pluginFileLocation);
-
-    //generate the files now
-    fs.writeFile(pluginFileLocation + pluginFileName, rmmvContent, (err) => {
-        if (err) {
-        console.error(err);
-        return vscode.window.showErrorMessage("cannot generate js file");
-        }
-        vscode.window.showInformationMessage("plugin " + pluginFileName + " has been created.");
-    });
+    fileGenerator(pluginFileName, rmmvContent);
 }
 
 //this is for userinputable system (work in progress)
@@ -97,4 +77,30 @@ export async function mvPluginGenerator(PluginInformation: PluginInformation) {
     completePluginAuthor = authorParam + pluginAuthor;
     completeParameters = pMParameter + '\'' + pluginTitle + '\')';
     //build the plugin
+}
+
+//seaprate the generator into the function
+function fileGenerator(fileName:string, filecontent:string) {
+    //gets the location of the folder
+    let folderWorkspaceLocation = vscode.workspace.workspaceFolders;
+    let pluginFileLocation : string;
+    if (folderWorkspaceLocation) {
+        console.log(folderWorkspaceLocation);
+        console.log(folderWorkspaceLocation[0].uri.path);
+        pluginFileLocation = folderWorkspaceLocation[0].uri.fsPath.toString() + '/js/plugins/';
+    } else 
+    {
+        return vscode.window.showWarningMessage("cannot find folder location");
+    }
+
+    console.log(pluginFileLocation);
+
+    //generate the files now
+    fs.writeFile(pluginFileLocation + fileName, filecontent, (err) => {
+        if (err) {
+        console.error(err);
+        return vscode.window.showErrorMessage("cannot generate js file");
+        }
+        vscode.window.showInformationMessage("plugin " + fileName + " has been created.");
+    });
 }
