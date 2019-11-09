@@ -25,12 +25,12 @@
 			{
 				"command": "RMMV.createNewRMMVPlugin",
 				"title": "Create a new rpg maker Plugin file",
-				"category": "Other"
+				"category": "RPG Maker MV"
 			},
 			{
 				"command": "RMMV.createBlankRMMVPlugin",
 				"title": "Create a new blank rpg maker Plugin file",
-				"category": "Other"
+				"category": "RPG Maker MV"
 			}
 		]
 	},
