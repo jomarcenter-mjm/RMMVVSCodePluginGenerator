@@ -1,6 +1,6 @@
 {
 	"name": "rmmvvscodeplugingenerator",
-	"displayName": "RMMVVSCodePluginGenerator",
+	"displayName": "RPGMaker MV Plugin Generator",
 	"description": "Create Plugin much easier with the visual plugin generator",
 	"version": "0.3.0",
 	"publisher": "MJMCreativeWorksAndIdea",
