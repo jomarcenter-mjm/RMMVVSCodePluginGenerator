@@ -2,7 +2,7 @@
 	"name": "rmmvvscodeplugingenerator",
 	"displayName": "RPGMaker MV Plugin Generator",
 	"description": "Create Plugin much easier with the visual plugin generator",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"publisher": "MJMCreativeWorksAndIdea",
 	"repository": {
 		"type": "git",
