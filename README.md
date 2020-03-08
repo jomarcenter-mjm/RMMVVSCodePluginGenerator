@@ -15,6 +15,11 @@ open visual studio code in your root folder press 'ctrl + shift + P' and type in
 ## Known Issues
 No issue as of this writing
 
+## Like my work
+Support me on Ko-Fi
+
+<a href="https://ko-fi.com/J3J61540Q"><img src="https://az743702.vo.msecnd.net/cdn/kofi3.png" width="130" ></a>
+
 ## License
 MIT License
 
