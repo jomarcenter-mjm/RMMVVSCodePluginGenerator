@@ -20,6 +20,9 @@ Support me on Ko-Fi
 
 <a href="https://ko-fi.com/J3J61540Q"><img src="https://az743702.vo.msecnd.net/cdn/kofi3.png" width="130" ></a>
 
+## NO-AI WARNING
+This project does not accept contributions or bug reports made by AI coding agents or LLMs.
+
 ## License
 MIT License
 
